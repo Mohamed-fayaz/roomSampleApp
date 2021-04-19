@@ -18,4 +18,7 @@ class WordRepository(private val wordDao: WordDao) {
         wordDao.insert(word)
 
     }
+    suspend fun deleteAll() {
+        wordDao.deleteAll()
+    }
 }

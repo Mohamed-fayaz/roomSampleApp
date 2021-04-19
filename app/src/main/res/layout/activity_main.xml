@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
@@ -13,46 +16,57 @@
         android:ems="10"
         android:hint="Enter Name"
         android:inputType="textPersonName"
-
+android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.045" />
-
-    <!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/recyclerview"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="500dp"-->
-<!--        android:padding="16dp"-->
-
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.969"-->
-<!--        tools:layout_editor_absoluteX="0dp"-->
-<!--        tools:listitem="@layout/recyclerview_item" />-->
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="save"
+        android:gravity="center"
+        android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+        />
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/recyclerview"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="500dp"-->
+    <!--        android:padding="16dp"-->
 
-    <TextView
-        android:id="@+id/resultview"
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.969"-->
+    <!--        tools:layout_editor_absoluteX="0dp"-->
+    <!--        tools:listitem="@layout/recyclerview_item" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wordrv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="20dp"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="-34dp">
+        android:layout_height="500dp"
+        android:layout_marginTop="49dp"
+        android:windowSoftInputMode="adjustNothing"
+
+        tools:listitem="@layout/recycler_view_item" />
 
 
-    </TextView>
+    <!--    <TextView-->
+    <!--        android:id="@+id/resultview"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:layout_margin="20dp"-->
+    <!--        android:textSize="20dp"-->
+    <!--        tools:layout_editor_absoluteX="-34dp">-->
+
+
+    <!--    </TextView>-->
+
+
+</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
