@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
 class MainActivity : AppCompatActivity() {
     private val newWordActivityRequestCode = 1
-    private val wordViewModel: WordViewModel by viewModels {
+ private val wordViewModel: WordViewModel by viewModels {
         WordViewModelFactory((application as WordsApplication).repository)
     }
     private lateinit var wordrv : RecyclerView
@@ -31,10 +31,10 @@ class MainActivity : AppCompatActivity() {
          wordrv = findViewById<RecyclerView>(R.id.wordrv)
         wordrv.layoutManager = LinearLayoutManager(this)
         wordViewModel.allWords.observe(this, Observer { words ->
-
-            val newString :MutableList<String> = mutableListOf("helli")
-                 words.forEach() {  newString.add(it.word) }
-            val newString1 = newString.joinToString("\n")
+//
+//            val newString :MutableList<String> = mutableListOf("helli")
+//                 words.forEach() {  newString.add(it.word) }
+//            val newString1 = newString.joinToString("\n")
 
 
             wordrv.adapter = WordViewAdapter(this,words)
